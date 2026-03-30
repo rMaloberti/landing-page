@@ -98,6 +98,7 @@ button {
   padding: 12px 25px;
   border: none;
   background: var(--accent);
+  box-shadow: 0 0 20px var(--accent);
   color: black;
   border-radius: 8px;
   cursor: pointer;
@@ -106,6 +107,7 @@ button {
 
 button:hover {
   transform: scale(1.05) !important;
+  box-shadow: 0 0 40px var(--accent);
 }
 
 /* CARDS */
@@ -129,7 +131,7 @@ button:hover {
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.03) !important;
+  transform: translateY(-10px) scale(1.03) !important;
 }
 
 /* FORM */
