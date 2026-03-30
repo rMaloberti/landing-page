@@ -134,6 +134,13 @@ form textarea {
   border: none;
 }
 
+/* FOOTER */
+footer {
+  text-align: center;
+  font-size: 0.75rem;
+  padding: 20px;
+}
+
 /* ANIMATION */
 .fade-in {
   opacity: 0;
