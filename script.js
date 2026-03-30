@@ -1,26 +1,38 @@
-// Scroll button
+// Scroll
 function scrollToContact() {
-  document.getElementById("contact").scrollIntoView({
-    behavior: "smooth",
-  });
+    document.getElementById("contact").scrollIntoView({
+        behavior: "smooth"
+    });
 }
 
-// Animation on scroll
+// Fade animation
 const elements = document.querySelectorAll(".fade-in");
 
 function showOnScroll() {
-  const triggerBottom = window.innerHeight * 0.85;
+    const trigger = window.innerHeight * 0.85;
 
-  elements.forEach((el) => {
-    const boxTop = el.getBoundingClientRect().top;
-
-    if (boxTop < triggerBottom) {
-      el.classList.add("visible");
-    }
-  });
+    elements.forEach(el => {
+        if (el.getBoundingClientRect().top < trigger) {
+            el.classList.add("visible");
+        }
+    });
 }
 
 window.addEventListener("scroll", showOnScroll);
-
-// Start on loading
 showOnScroll();
+
+// Dark / Light mode
+const toggle = document.getElementById("theme-toggle");
+
+toggle.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+    toggle.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
+});
+
+// Mobile menu
+const burger = document.getElementById("burger");
+const nav = document.getElementById("nav");
+
+burger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
