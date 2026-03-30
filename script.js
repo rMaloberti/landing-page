@@ -1,11 +1,11 @@
-// Scroll bouton
+// Scroll button
 function scrollToContact() {
     document.getElementById("contact").scrollIntoView({
         behavior: "smooth"
     });
 }
 
-// Animation au scroll
+// Animation on scroll
 const elements = document.querySelectorAll(".fade-in");
 
 function showOnScroll() {
@@ -22,5 +22,5 @@ function showOnScroll() {
 
 window.addEventListener("scroll", showOnScroll);
 
-// lancer au chargement
+// Start on loading
 showOnScroll();
