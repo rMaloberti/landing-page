@@ -19,7 +19,16 @@ function showOnScroll() {
 }
 
 window.addEventListener("scroll", showOnScroll);
-showOnScroll();
+
+// Loader
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  loader.style.opacity = "1";
+  setTimeout(() => {
+    loader.style.display = "none";
+    showOnScroll();
+  }, 500);
+});
 
 // Dark / Light mode
 const toggle = document.getElementById("theme-toggle");
