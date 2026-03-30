@@ -81,7 +81,7 @@ form input, form textarea {
     border: none;
 }
 
-/* Animation fade */
+/* Fade animation */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
